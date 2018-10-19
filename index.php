@@ -93,3 +93,15 @@ $users = [$user_1, $user_2, $user_3];
 print_r($users);
 
 echo $users[2]['surname'];
+
+
+$kaina = 89;
+
+$kaina_su_pvm = getVatPrice($kaina * $vat);
+
+function getVatPrice($price, $vat = 0.21) {
+	$vatPrice = $price * (1 + $vat);
+	return $vatPrice;
+}
+
+
